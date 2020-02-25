@@ -1,0 +1,89 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westus"
+        },
+        "networkInterfaceName": {
+            "value": "linux1"
+        },
+        "networkSecurityGroupName": {
+            "value": "linuxvm-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/6cb111c0-a159-424b-8fb0-7777ccb7940e/resourceGroups/Learning_2/providers/Microsoft.Network/virtualNetworks/learningvnet"
+        },
+        "publicIpAddressName": {
+            "value": "LinuxVM-Pubip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "LinuxVM"
+        },
+        "virtualMachineRG": {
+            "value": "Learning_2"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ms"
+        },
+        "adminUsername": {
+            "value": "Student"
+        },
+        "adminPassword": {
+            "value": "CArEfusion05"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "cs46cb111c0a159x424bx8fb"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/6cb111c0-a159-424b-8fb0-7777ccb7940e/resourceGroups/Learning_2/providers/Microsoft.Storage/storageAccounts/cs46cb111c0a159x424bx8fb"
+        },
+        "autoShutdownStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownTime": {
+            "value": "17:00"
+        },
+        "autoShutdownTimeZone": {
+            "value": "Pacific Standard Time"
+        },
+        "autoShutdownNotificationStatus": {
+            "value": "Enabled"
+        },
+        "autoShutdownNotificationLocale": {
+            "value": "en"
+        },
+        "autoShutdownNotificationEmail": {
+            "value": "gmarsh1981@gmail.com"
+        }
+    }
+}

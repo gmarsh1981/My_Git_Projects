@@ -1,4 +1,5 @@
-﻿Configuration startServiceBlue {
+﻿#THis is just a test to make sure that this works
+Configuration startServiceBlue {
     param(
         [Parameter(mandatory=$true)]
         [string]$computerName

@@ -1,4 +1,4 @@
-﻿#This will start the BlueTooth Service on a machine using DSC
+﻿#This will start the BlueTooth Service on a machine using DSC today
 Configuration startServiceBlue {
     param(
         [Parameter(mandatory=$true)]

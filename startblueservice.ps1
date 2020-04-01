@@ -1,4 +1,5 @@
-﻿Configuration startServiceBlue {
+﻿#This will start the BlueTooth Service on a machine using DSC
+Configuration startServiceBlue {
     param(
         [Parameter(mandatory=$true)]
         [string]$computerName
